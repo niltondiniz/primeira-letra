@@ -2,7 +2,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:primeira_letra/app/shared/utils/helper.dart';
 import 'package:primeira_letra/app/shared/widgets/word_options.dart';
 import 'home_controller.dart';
 import 'package:flutter_animation_progress_bar/flutter_animation_progress_bar.dart';
@@ -167,7 +166,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                     width: MediaQuery.of(context).size.width,
                     height: MediaQuery.of(context).size.height * 0.7,
                     child: CachedNetworkImage(
-                      imageUrl: controller.actualImage.previewURL,
+                      imageUrl: controller.actualImage.webformatURL,
                     )
                     /*Image.network(
                     controller.actualImage.previewURL,
